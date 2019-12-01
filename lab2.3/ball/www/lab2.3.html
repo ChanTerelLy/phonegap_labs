@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+
+<body>
+<input type="color" id="bgInput1" onchange="changeColor()">
+<input type="color" id="bgInput2" onchange="changeColor()">
+<div class="calculator">
+    <input type="number" id="t1">
+    <input type="number" id="t2">
+    <input type="text" readonly id="sum">
+    <button onclick="sum()">+</button>
+    <button onclick="sub()">-</button>
+    <button onclick="mul()">*</button>
+    <button onclick="dev()">/</button>
+    <button onclick="sin()">sin</button>
+    <button onclick="cos()">cos</button>
+    <button onclick="sqr()">sqr</button>
+</div>
+
+<div class="analog-clock">
+    <svg width="140" height="140">
+        <circle id="clock-face" cx="70" cy="70" r="65" />
+        <line id="h-hand" x1="70" y1="70" x2="70" y2="38" />
+        <line id="m-hand" x1="70" y1="70" x2="70" y2="20" />
+        <line id="s-hand" x1="70" y1="70" x2="70" y2="12" />
+        <line id="s-tail" x1="70" y1="70" x2="70" y2="56" />
+        <text x="62" y="18">12</text>
+        <text x="126" y="76">3</text>
+        <text x="66" y="130">6</text>
+        <text x="7" y="76">9</text>
+    </svg>
+    <div class="time-text">
+        <span id="hr">00</span>
+        <span>:</span>
+        <span id="min">00</span>
+        <span>:</span>
+        <span id="sec">00</span>
+        <span id="suffix">--</span>
+    </div>
+    <script>
+        function number(value){
+            document.form1.result.value +=value;
+        }
+        function cle(value){
+            document.form1.result.value =value;
+        }
+        function evalua(){
+            //var evalu = eval(document.form1.result.value);
+            document.form1.result.value = eval(document.form1.result.value);
+        }
+    </script>
+    <form name="form1">
+        <table align="center">
+            <tr><td colspan="4">SIMPLE CALCULATOR</td></tr>
+            <tr><td colspan="4">
+                <input type = "text" name="result" placeholder="0" disabled style="text-align:right"></input>
+            </td></tr>
+            <tr>
+                <td><button type = "button" onclick="number(value)" value="1">1</button></td>
+                <td><button type = "button" onclick="number(value)" value="2">2</button></td>
+                <td><button type = "button" onclick="number(value)" value="3">3</button></td>
+                <td><button type = "button" onclick="number(value)" value="+">+</button></td>
+            </tr>
+            <tr>
+                <td><button type = "button" onclick="number(value)" value="4">4</button></td>
+                <td><button type = "button" onclick="number(value)" value="5">5</button></td>
+                <td><button type = "button" onclick="number(value)" value="6">6</button></td>
+                <td><button type = "button" onclick="number(value)" value="-">-</button></td>
+            </tr>
+            <tr>
+                <td><button type = "button" onclick="number(value)" value="7">7</button></td>
+                <td><button type = "button" onclick="number(value)" value="8">8</button></td>
+                <td><button type = "button" onclick="number(value)" value="9">9</button></td>
+                <td><button type = "button" onclick="number(value)" value="/">/</button></td>
+            </tr>
+            <tr>
+                <td><button type = "button" onclick="number(value)" value="."><strong>.</strong></button></td>
+                <td><button type = "button" onclick="number(value)" value="0">0</button></td>
+                <td><button type = "button" onclick="number(value)" value="*">*</button></td>
+                <td><button type = "button" onclick="number(value)" value="%">%</button></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type = "button" onclick="cle(value)" value="">C</button></td>
+                <td colspan="2">
+                    <button type = "button" onclick="evalua()">=</button>
+                </td>
+            </tr>
+        </table>
+        <script src="js/my.js"></script>
+        <script src="js/calc.js"></script>
+        <script src="js/clock.js"></script>
+</body>
+</html>

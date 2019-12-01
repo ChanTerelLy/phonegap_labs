@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="44d0325e-2fe1-4195-8e04-eead2b0a1b58" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1SPVY9XsdN5XYVTeoHxc2J1DGxO" />
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js.phonegap.settings.workdir" value="C:\Users\Roman\Desktop\lab2.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../2.3" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="settings.phonegap" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Run PhoneGap" type="PhoneGap" factoryName="PhoneGap/Cordova" nameIsGenerated="true">
+      <option name="myExecutable" value="C:\Users\Roman\AppData\Roaming\npm\phonegap.cmd" />
+      <option name="myWorkDir" value="C:\Users\Roman\projects\FronEndProjects\Cordova\lab2.2" />
+      <option name="myCommand" value="run" />
+      <option name="myPassParent" value="true" />
+      <option name="myPlatform" value="browser" />
+      <option name="myExtraArgs" value="" />
+      <option name="hasTarget" value="false" />
+      <option name="target" value="" />
+      <method v="2">
+        <option name="PhonegapTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="44d0325e-2fe1-4195-8e04-eead2b0a1b58" name="Default Changelist" comment="" />
+      <created>1571465262903</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1571465262903</updated>
+      <workItem from="1571465264039" duration="1705000" />
+      <workItem from="1571480616438" duration="62000" />
+      <workItem from="1571557990222" duration="1360000" />
+      <workItem from="1571859159490" duration="203000" />
+      <workItem from="1571859378644" duration="2117000" />
+      <workItem from="1571861535145" duration="112000" />
+      <workItem from="1571861663328" duration="257000" />
+      <workItem from="1571862080158" duration="400000" />
+      <workItem from="1571862497646" duration="446000" />
+      <workItem from="1571862989626" duration="86000" />
+      <workItem from="1571863096547" duration="3417000" />
+      <workItem from="1571866549158" duration="2111000" />
+      <workItem from="1572080473001" duration="1151000" />
+      <workItem from="1572294428880" duration="1836000" />
+      <workItem from="1572345063247" duration="241000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>
